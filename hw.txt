@@ -1,0 +1,13 @@
+ceph-deploy.
+terraform vm prep.
+
+informatie op basis van 
+https://ceph.io/community/bluestore-default-vs-tuned-performance-comparison/
+
+
+5 nodes, bestaande uit:
+- 3 x 4TB disk per node voor OSD
+- 1 x 400G Ceph Metadata (RocksDB/WAL) 
+- 64GB memory. (27G nodig volgens documentatie. +5G voor werking OS. 64 is relatief veel. Berekining volgens whitepaper = 87G).
+- 8 CPU's. (Maar whitepaper geeft 112CPUs. Kan dus hoger worden.)
+
